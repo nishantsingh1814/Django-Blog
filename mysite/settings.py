@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '3ns8o=buvhjt8%o@@*de#rsjk*87!3_+f*!=zjozuk98qb=(52'
+SECRET_KEY = os.environ['BLOG_SECRET_KEY']
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -67,6 +67,12 @@ TEMPLATES = [
         },
     },
 ]
+
+EMAIL_HOST = os.environ['EMAIL_HOST']
+EMAIL_HOST_USER = os.environ['EMAIL_HOST_USER']
+EMAIL_HOST_PASSWORD = os.environ['EMAIL_HOST_PASSWORD']
+EMAIL_PORT = os.environ['EMAIL_PORT']
+EMAIL_USE_TLS = True
 
 WSGI_APPLICATION = 'mysite.wsgi.application'
 

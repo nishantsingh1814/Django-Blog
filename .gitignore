@@ -1,0 +1,10 @@
+*.pyc
+*.sqlite3
+.idea
+.vagrant
+vagrant_ansible_inventory_default
+*.t7
+*.log
+*.swp
+*.DS_Store
+*_trie
